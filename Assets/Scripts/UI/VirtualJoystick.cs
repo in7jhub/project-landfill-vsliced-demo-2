@@ -1,41 +1,68 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // 키보드, 마우스, 터치를 이벤트로 오브젝트에 보낼 수 있는 기능을 지원
+using UnityEngine.EventSystems; 
+// 키보드, 마우스, 터치를 이벤트로 오브젝트에 보낼 수 있는 기능을 지원
 
-public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
-{
+public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler{
     [SerializeField]
-    private RectTransform lever;    // 추가
-    private RectTransform rectTransform;    // 추가
+    private RectTransform lever;
+    private RectTransform rectTransform;
+    private Vector2 leverVector;
+    private int playerSpeedLevel;
+    private int playerHeadingAngle;
+    private bool isDragging;
 
-    private void Awake()    // 추가
-    {
+    private void Awake(){
         rectTransform = GetComponent<RectTransform>();
+        playerSpeedLevel = 0;
+        isDragging = false;
     }
-    
-    public void OnBeginDrag(PointerEventData eventData)
-    {  
-        // Debug.Log("Begin");
 
-        // 추가
+    public void OnBeginDrag(PointerEventData eventData){   
+        var inputDir = eventData.position;
+        lever.anchoredPosition = inputDir;
+    }
+    
+    public void OnDrag(PointerEventData eventData){
+        isDragging = true;
+        setPlayerHeadingAngle();
+        setPlayerSpeedLevel();
         var inputDir = eventData.position ;
         lever.anchoredPosition = inputDir;
     }
     
-    // 오브젝트를 클릭해서 드래그 하는 도중에 들어오는 이벤트    // 하지만 클릭을 유지한 상태로 마우스를 멈추면 이벤트가 들어오지 않음    
-    public void OnDrag(PointerEventData eventData)
-    {
-        // Debug.Log("Drag");
-        
-        // 추가
-        var inputDir = eventData.position ;
-        lever.anchoredPosition = inputDir;
+    public void OnEndDrag(PointerEventData eventData){
+        isDragging = false;
+        lever.anchoredPosition = rectTransform.position;
+        setPlayerSpeedLevel(0);
     }
-    
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        // Debug.Log("End");
-        
-        // 추가
-        lever.anchoredPosition = Vector2.zero;
+
+    public void setPlayerSpeedLevel(){ 
+        Vector3 offset = rectTransform.position - lever.position;
+        float sqrLen = offset.sqrMagnitude;
+        if(sqrLen == 0){ return; }
+        if(sqrLen > 18400){
+            playerSpeedLevel = 1;
+        } else if(sqrLen > 9000){
+            playerSpeedLevel = 2;
+        }
     }
+
+    public void setPlayerSpeedLevel(int n){ 
+        if(n >= 0 && n <3) playerSpeedLevel = n;
+    }
+
+    public void setPlayerHeadingAngle(){
+        float width = rectTransform.position.x - lever.anchoredPosition.x;
+        float height = rectTransform.position.y - lever.anchoredPosition.y;
+        
+        float radian = Mathf.Atan2(height,width);
+        float angle = radian * 180 / Mathf.PI;
+        //transform.rotation = Quaternion.Euler(0, 0, angle); //0~360 환산
+    }
+
+    public bool getIsDragging(){
+        return isDragging;
+    }
+
+    public int getPlayerSpeedLevel(){ return playerSpeedLevel; }
 }
