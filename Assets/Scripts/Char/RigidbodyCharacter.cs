@@ -1,35 +1,48 @@
 using UnityEngine;
 
 public class RigidbodyCharacter : MonoBehaviour {
-    public float speed = 10f;
+    public enum LRUDN{ Left,Right,Up,Down,Neutral }
+    private LRUDN playerHeadingLRN;
+    private LRUDN playerHeadingUDN;
+    public float speed;
     public Rigidbody rb;
-    Vector3 force;
+    Vector2 playerDir;
     public VirtualJoystick controller;
 
     void Start(){
+        playerHeadingLRN = LRUDN.Neutral;
+        playerHeadingUDN = LRUDN.Neutral;
         rb = GetComponent<Rigidbody>();
+        speed = 30;
     }
 
-	// 키 입력과 이동방향 계산
     void Update(){
-        InputAndDir();
-        rb.AddForce(new Vector3(1,0,0));
+        playerDir = getLeverDir(controller);
     }
 
-	// 계산된 방향으로 물리적인 이동 구현
     private void FixedUpdate(){
-        rb.AddForce(new Vector3(1,0,0));
+        rb.AddForce(new Vector3(playerDir.x*speed,1/*!!!중력이 유지되도록 바꾸기!!!*/,playerDir.y*speed));
+        // Debug.Log(playerHeadingLRN);
+        // Debug.Log(playerHeadingUDN);
     }
 
-	// 키 입력과 그에 따른 이동방향을 계산하는 함수
-    void InputAndDir(){
-        // dir.x = Input.GetAxis("Horizontal");   // x축 방향 키 입력
-        // dir.z = Input.GetAxis("Vertical");     // z축 방향 키 입력
-        // Debug.Log("X: "+dir.x);
-        // Debug.Log("Z: "+dir.z);
-        if (controller.getIsDragging()){
-            //transform.velocity = Quaternion.Euler(0,0,0);
-            //현재 보고 있는 방향을 정의
+    Vector2 getLeverDir(VirtualJoystick _controller){
+        if(_controller.getIsDragging()){
+            return _controller.getLeverDir();
+        } else {
+            return Vector2.zero;
         }
+    }
+
+    private void setPlayerLRN(VirtualJoystick _controller){
+        if(_controller.getLeverLRN() == 0) playerHeadingLRN = LRUDN.Left;
+        else if(_controller.getLeverLRN() == 1) playerHeadingLRN = LRUDN.Right;
+        else playerHeadingLRN = LRUDN.Neutral;
+    }
+
+    private void setPlayerUDN(VirtualJoystick _controller){
+        if(_controller.getLeverUDN() == 2) playerHeadingUDN = LRUDN.Up;
+        else if(_controller.getLeverUDN() == 3) playerHeadingUDN = LRUDN.Down;
+        else playerHeadingUDN = LRUDN.Neutral;
     }
 }
