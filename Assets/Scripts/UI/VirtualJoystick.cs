@@ -16,6 +16,7 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private int leverHeadingAngle;
     public LRUDN leverHeadingLRN;
     public LRUDN leverHeadingUDN;
+    
     private bool isDragging;
     
     [Range(10f, 150f)] 
@@ -24,7 +25,7 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void Awake(){
         leverHeadingLRN = LRUDN.Neutral;
         leverHeadingUDN = LRUDN.Neutral;
-        plate = GetComponent<RectTransform>();
+    //plate.position.x = 10f;       
         speedLevel = 0;
         isDragging = false;
         plateHalfWidth = plate.sizeDelta.x/2f;
@@ -34,22 +35,21 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
 
     public void OnBeginDrag(PointerEventData eventData){   
-        var inputDir = eventData.position;
-        lever.anchoredPosition = inputDir;
+        lever.anchoredPosition = eventData.position;
     }
     
     public void OnDrag(PointerEventData eventData){
         isDragging = true;
-        calcLeverHeadingDir();
         setLeverUDN();
         setLeverLRN();
         setPlayerSpeedLevel();
         setLeverPosition(eventData);
+        calcLeverHeadingDir();
     }
     
     public void OnEndDrag(PointerEventData eventData){
         isDragging = false;
-        lever.anchoredPosition = plate.position;
+        lever.anchoredPosition = plate.anchoredPosition;
         setPlayerSpeedLevel(0);
     }
 
