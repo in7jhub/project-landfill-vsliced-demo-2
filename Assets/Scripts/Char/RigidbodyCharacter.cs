@@ -27,7 +27,7 @@ public class RigidbodyCharacter : MonoBehaviour {
     }
 
     Vector2 getLeverDir(VirtualJoystick _controller){
-        if(_controller.getIsDragging()){
+        if(_controller.getIsJoystickDragging()){
             return _controller.getLeverDir();
         } else {
             return Vector2.zero;

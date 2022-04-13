@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler{
     public enum LRUDN{ Left,Right,Up,Down,Neutral }
+    public GameObject leverGObj;
+    public GameObject plateGObj;
     public RectTransform lever;
     public RectTransform plate;
     private float plateHalfWidth;
@@ -16,30 +18,34 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private int leverHeadingAngle;
     public LRUDN leverHeadingLRN;
     public LRUDN leverHeadingUDN;
-    
-    private bool isDragging;
+    private bool isJoystickDragging;
     
     [Range(10f, 150f)] 
     public float leverRange;
     
     private void Awake(){
+        lever.position = Vector2.zero;
+        plate.position = Vector2.zero;
         leverHeadingLRN = LRUDN.Neutral;
         leverHeadingUDN = LRUDN.Neutral;
-    //plate.position.x = 10f;       
         speedLevel = 0;
-        isDragging = false;
+        isJoystickDragging = false;
         plateHalfWidth = plate.sizeDelta.x/2f;
         plateHalfHeight = plate.sizeDelta.y/2f;
         plateWidth = plate.sizeDelta.x;
         plateHeight = plate.sizeDelta.y;
     }
 
-    public void OnBeginDrag(PointerEventData eventData){   
+    public void OnBeginDrag(PointerEventData eventData){
+        Debug.Log(eventData.position);
+        // setJoystickVisibility(true);
         lever.anchoredPosition = eventData.position;
+        plate.anchoredPosition = eventData.position;
     }
     
     public void OnDrag(PointerEventData eventData){
-        isDragging = true;
+        Debug.Log(eventData.position);
+        isJoystickDragging = true;
         setLeverUDN();
         setLeverLRN();
         setPlayerSpeedLevel();
@@ -48,7 +54,8 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     
     public void OnEndDrag(PointerEventData eventData){
-        isDragging = false;
+        // setJoystickVisibility(false);
+        isJoystickDragging = false;
         lever.anchoredPosition = plate.anchoredPosition;
         setPlayerSpeedLevel(0);
     }
@@ -73,7 +80,7 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-    public void setPlayerSpeedLevel(int n){ 
+    public void setPlayerSpeedLevel(int n){
         if(n >= 0 && n <3) speedLevel = n;
     }
 
@@ -84,6 +91,11 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         );
         
         leverDir = leverVec.normalized;
+    }
+
+    public void setJoystickVisibility(bool _visibility){
+        plateGObj.SetActive(_visibility);
+        leverGObj.SetActive(_visibility);
     }
 
     private void setLeverLRN(){
@@ -110,8 +122,8 @@ public class VirtualJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         else return 4;
     }
 
-    public bool getIsDragging(){
-        return isDragging;
+    public bool getIsJoystickDragging(){
+        return this.isJoystickDragging;
     }
 
     public int getPlayerSpeedLevel(){ return speedLevel; }
