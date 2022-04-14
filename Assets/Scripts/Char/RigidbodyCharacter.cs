@@ -13,7 +13,6 @@ public class RigidbodyCharacter : MonoBehaviour {
         playerHeadingLRN = LRUDN.Neutral;
         playerHeadingUDN = LRUDN.Neutral;
         rb = GetComponent<Rigidbody>();
-        speed = 30;
     }
 
     void Update(){
@@ -27,7 +26,7 @@ public class RigidbodyCharacter : MonoBehaviour {
     }
 
     Vector2 getLeverDir(VirtualJoystick _controller){
-        if(_controller.getIsJoystickDragging()){
+        if(_controller.isDragging){
             return _controller.getLeverDir();
         } else {
             return Vector2.zero;
