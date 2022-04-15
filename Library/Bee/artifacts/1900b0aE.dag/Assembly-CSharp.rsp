@@ -322,6 +322,7 @@
 -r:"F:/UnityCustomRoot/2020.3.19f1/2021.3.0f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"F:/UnityCustomRoot/2020.3.19f1/2021.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"F:/UnityCustomRoot/2020.3.19f1/2021.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/com.lightbug.character-controller-pro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
@@ -334,7 +335,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Camera/PlayerCam.cs"
-"Assets/Scripts/Char/RigidbodyCharacter.cs"
+"Assets/Scripts/Char/PlayerController.cs"
+"Assets/Scripts/Char/PlayerState.cs"
 "Assets/Scripts/UI/JoystickDebugger.cs"
 "Assets/Scripts/UI/VirtualJoystick.cs"
 -langversion:9.0

@@ -1,2 +1,0 @@
-Using template 'F:/UnityCustomRoot/2020.3.19f1/2021.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\LauncherManifest.xml'
-

@@ -36,9 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ultimate Joystick\Editor\UltimateJoystickReadme.cs" />
-     <Compile Include="Assets\Ultimate Joystick\Editor\UltimateJoystickEditor.cs" />
-     <Compile Include="Assets\Ultimate Joystick\Editor\UltimateJoystickReadmeEditor.cs" />
+     <Compile Include="Assets\KinematicCharacterController\Core\Editor\ReadOnlyPropertyDrawer.cs" />
+     <Compile Include="Assets\KinematicCharacterController\Examples\Scripts\Editor\PauseStateHandler.cs" />
+     <Compile Include="Assets\KinematicCharacterController\Core\Editor\KinematicCharacterMotorEditor.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -962,6 +962,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.lightbug.character-controller-pro.csproj">
+      <Project>{b59e21e4-25f5-d7a5-0254-106ef4607fb0}</Project>
+      <Name>com.lightbug.character-controller-pro</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
