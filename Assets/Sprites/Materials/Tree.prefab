@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1090114118043246471}
   - component: {fileID: 8913455957257431645}
   - component: {fileID: 5305079954443668305}
-  - component: {fileID: 2233150824796559018}
+  - component: {fileID: 6444979664999170228}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: 0.195, z: -6.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7819168889211505043}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -82,18 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2233150824796559018
-BoxCollider:
+--- !u!136 &6444979664999170228
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174809165998395560}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c5b43a4fbd94eb8419e614217c355a6e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 0.43, z: 10.000002}
+  m_Radius: 0.13
+  m_Height: 9.21
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1858838439182114536
 GameObject:
@@ -123,6 +126,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.05, y: 0.065, z: -0.04}
   m_LocalScale: {x: 8.501948, y: -1.0258789, z: 1.1085514}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7819168889211505043}
   m_RootOrder: 1
@@ -138,6 +142,7 @@ MeshRenderer:
   m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -202,6 +207,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2322997, y: 1.7816038, z: 0.51593447}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1090114118043246471}
   - {fileID: 7971437904269250608}

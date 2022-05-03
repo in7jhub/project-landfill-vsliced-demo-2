@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.lightbug.character-controller-pro", "com.lightbug.character-controller-pro.csproj", "{b59e21e4-25f5-d7a5-0254-106ef4607fb0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b59e21e4-25f5-d7a5-0254-106ef4607fb0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b59e21e4-25f5-d7a5-0254-106ef4607fb0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{eadea5d9-9e8d-59d1-5ae6-7b79a3c7b9ea}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2021_3_0;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_TERRAIN_MODULE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2021_3_0;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_TERRAIN_MODULE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -36,125 +36,125 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Camera\Camera2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\PhysicsActor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\AnimatorLink.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterReferenceObject.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Ladder.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\PerformanceDemoManager.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\ZeroGravity.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterAIBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\VerticalDirectionModifier2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphicsScaler.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\VerticalDirectionModifier3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\RotationAction.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterActorEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CharacterControllerProEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\NodeBasedPlatform.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\NormalMovement.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\PerformanceCharacterBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HitInfo.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\UIInputHandler.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\AnimatorLink.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterDebug.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AISequenceBehaviourEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\LookAtTarget.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomHeaderAttribute.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Mobile\InputButton.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterDetector\PositionAndRotationModifier.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterBodyEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialsProperties.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\BoxColliderComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AnimationSpeed.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Mobile\InputAxes.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\WallSlide.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\MovementReferenceParameters.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\NormalMovementExtras.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterConstants.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CapsuleColliderComponent2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialsPropertiesEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\ActionBasedPlatform.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\ChangeTargetFrameRate.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\LadderClimbing.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CollisionInfo.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\CharacterStateEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterActionsAsset.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\FloatAction.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterActionsAssetEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterDetector\JumpPad.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterAIAction.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\One Way Platform\OneWayPlatform.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CapsuleColliderComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AIFollowBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HelpBoxAttribute.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\CharacterState.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\MainMenuManager.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\Platform.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\PhysicsActorSync.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterBody.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AIWanderBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Camera\Camera2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Ladder.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterBrainEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\LineRendererUtility.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\ZeroGravity.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AISequenceBehaviourEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\VerticalDirectionModifier.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphicsRootController.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Rope.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\FloatAction.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterAIBehaviour.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterActions.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\LookAtTarget.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphicsScaler.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\VerticalDirectionModifier2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\BoolAction.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterActionsAssetEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\LedgeHanging.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\ActionBasedPlatform.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomUtilities.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Mobile\InputButton.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\UnityInputHandler.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterDetector\PositionAndRotationModifier.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\Vector2Action.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomHeaderAttribute.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Camera\Camera3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\VerticalDirectionModifier3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterDetector\JumpPad.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphics2DRotator.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterAIAction.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\RotationAction.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterBodyEditor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterActorEditor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\One Way Platform\OneWayPlatform.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\InputHandlerSettings.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\SphereColliderComponent2D.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\ExecutionOrder.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\PlatformNode.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\RopeClimbing.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\MenuButton.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomClassDrawerEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsUtilities.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\ChangeTargetFrameRate.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomClassDrawerEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\MovementAction.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CharacterControllerProEditor.cs" />
      <Compile Include="Assets\Character Controller Pro\Demo\Scripts\RigidbodyModifier.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialsProperties.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\LadderClimbing.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\NodeBasedPlatform.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CapsuleColliderComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterParticles.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterBrain.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\VerticalAlignmentSettings.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AIFollowBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterParticles.cs" />
      <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\Trigger.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\BoxColliderComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AnimationSpeed.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HelpBoxAttribute.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\NormalMovement.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CustomSimulatedObject.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\CharacterState.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\CharacterStateController.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\DemoSceneManager.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CollisionInfo.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Teleporter.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\NodeBasedPlatformEditor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\MainMenuManager.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\SphereColliderComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\PerformanceCharacterBehaviour.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\Platform.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Mobile\InputAxes.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\WallSlide.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterActor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterCollisionInfo.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HitInfo.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\CharacterStateEditor.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\PhysicsActorSync.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CharacterDetector.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Utilities\ImplementationTools.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AISequenceBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\PhysicsComponent.cs" />
      <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\Contact.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialController.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphics.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\States\MovementReferenceParameters.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HitInfoFilter.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\JetPack.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ColliderComponent3D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\ConveyorBeltPlatform.cs" />
-     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\UIInputHandler.cs" />
-     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterBody.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\BoxColliderComponent2D.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\Dash.cs" />
-     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomClassDrawer.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\FpsCounter.cs" />
      <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\ConditionAttribute.cs" />
      <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\InputHandler.cs" />
-     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AIWanderBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\PhysicsActor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CapsuleColliderComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialsPropertiesEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Character\Actions\CharacterActions.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\BoolAction.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\InputHandler\InputHandlerSettings.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\SphereColliderComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\PlatformNode.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\DemoSceneManager.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\SphereColliderComponent3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterActor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Utilities\ImplementationTools.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\JetPack.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\CharacterReferenceObject.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomUtilities.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\RopeClimbing.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\MenuButton.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\VerticalAlignmentSettings.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Teleporter.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\NodeBasedPlatformEditor.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\RigidbodyComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Materials\MaterialController.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\CustomClassDrawer.cs" />
      <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\CharacterCollisions.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AddTorque3D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Implementation\Scripts\Inputs\Actions\Vector2Action.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Character\Graphics\CharacterGraphics2DRotator.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CustomSimulatedObject.cs" />
+     <Compile Include="Assets\Character Controller Pro\Core\Scripts\Utilities\CharacterDetector.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\AI\AISequenceBehaviour.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\HitInfoFilter.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\Platforms\ConveyorBeltPlatform.cs" />
+     <Compile Include="Assets\Character Controller Pro\Utilities\Scripts\BoxColliderComponent2D.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\States\Dash.cs" />
+     <Compile Include="Assets\Character Controller Pro\Demo\Scripts\FpsCounter.cs" />
      <None Include="Assets\Character Controller Pro\OPEN ME\README.txt" />
      <None Include="Assets\Character Controller Pro\Implementation\Resources\template-character-state.txt" />
      <None Include="Assets\Character Controller Pro\Implementation\Resources\template-character-actions.txt" />
@@ -186,12 +186,6 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
         <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-        <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-        <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
         <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -348,9 +342,6 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
         <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VirtualTexturingModule">
-        <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
         <HintPath>F:\UnityCustomRoot\2020.3.19f1\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>

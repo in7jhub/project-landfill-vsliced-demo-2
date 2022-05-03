@@ -1,9 +1,12 @@
 using UnityEngine;
-using UnityEngine.EventSystems; 
-// 키보드, 마우스, 터치를 이벤트로 오브젝트에 보낼 수 있는 기능을 지원
+using UnityEngine.EventSystems;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler{
-    public enum LRUDN{ Left,Right,Up,Down,Neutral }
+public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+{
+    public enum LRUDN { Left, Right, Up, Down, Neutral }
     public GameObject leverGObj;
     public GameObject plateGObj;
     public RectTransform leverRectTransform;
@@ -19,137 +22,200 @@ public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public LRUDN leverHeadingLRN;
     public LRUDN leverHeadingUDN;
     public bool isDragging;
-    
-    [Range(10f, 150f)] 
+    public bool shortTouchTimerFlag;
+    public bool longTouchTimerFlag;
+    public bool touchIntervalTimerFlag;
+    public bool circleFlag;
+    public bool stopTouchFlag;
+    public GameObject controlPanel;
+
+    [Range(150, 200)]
+    public int dashDetectionRange;
+
+    [Range(5, 30)]
+    public int movingDetectionRange;
+
+    public GestureAnalyzer gesture;
+
+    [Range(10, 150)]
     public float leverRange;
-    
-    private void Awake(){
+
+    [SerializeField]
+    public bool gestureDebuggerOn;
+    public int touchSampleRate;
+
+    private void Awake()
+    {
+        //pui.vehicleStr = "game";
         leverRectTransform.localPosition = Vector2.zero;
-        // plateRectTransform.position = new Vector2(100,100);
         leverHeadingLRN = LRUDN.Neutral;
         leverHeadingUDN = LRUDN.Neutral;
         speedLevel = 0;
         isDragging = false;
-        plateHalfWidth = plateRectTransform.sizeDelta.x/2f;
-        plateHalfHeight = plateRectTransform.sizeDelta.y/2f;
+        plateHalfWidth = plateRectTransform.sizeDelta.x / 2f;
+        plateHalfHeight = plateRectTransform.sizeDelta.y / 2f;
         plateWidth = plateRectTransform.sizeDelta.x;
         plateHeight = plateRectTransform.sizeDelta.y;
+
+        controlPanel = controlPanel.AddComponent<GestureAnalyzer>().gameObject;
+
+        if (gestureDebuggerOn)
+        {
+            gesture.debugger = controlPanel.AddComponent<GestureDebugger>();
+            gesture.touchSampleRate = touchSampleRate;
+            gesture.isDebuggerOn = true;
+        }
+        //circleFlag = false;
+        //coroutineFindingCirclingGesture = null;
     }
 
-    // private void Update(){
-    //     if(Input.touchCount > 0){
-    //         Debug.Log("asd;lfkdas");
-    //         Touch touch = Input.GetTouch(0);
-    //         Vector2 pos = Camera.main.ScreenToWorldPoint(touch.position);
-    //         plate.anchoredPosition = pos;
-    //     }
-    // }
-
-    public void OnBeginDrag(PointerEventData e){
+    public void OnBeginDrag(PointerEventData e)
+    {
         plateRectTransform.position = e.position;
     }
 
-    public void OnDrag(PointerEventData e){
+    public void OnDrag(PointerEventData e)
+    {
+        gesture.touch.record(e);
         isDragging = true;
         setLeverUDN();
         setLeverLRN();
-        setPlayerSpeedLevel();
         setLeverPosition(e);
         setLeverHeadingDir(leverRectTransform, plateRectTransform);
     }
 
-    private void OnEndDrag(PointerEventData e){
+    private void OnEndDrag(PointerEventData e)
+    {
         isDragging = false;
-        // setJoystickVisibility(false);
-        // lever.anchoredPosition = plate.anchoredPosition;
-        // setPlayerSpeedLevel(0);
     }
 
-    public void OnPointerDown(PointerEventData e){
+    public void OnPointerDown(PointerEventData e)
+    {
+        stopTouchFlag = true;
+        gesture.touch.record(e);
+        touchIntervalTimerFlag = false;
+        longTouchTimerFlag = true;
+        circleFlag = true;
+        shortTouchTimerFlag = true;
+        // if (coroutineFindingCirclingGesture != null) StopCoroutine(findCirclingGesture(e));
+        // else coroutineFindingCirclingGesture = StartCoroutine(findCirclingGesture(e));
+
         plateRectTransform.position = e.position;
+        gesture.touch.log.origin = e.position;
     }
 
     public void OnPointerUp(PointerEventData e)
     {
+        stopTouchFlag = false;
+        //circleFlag = false;
+        gesture.touch.stopRecord();
+        //황금 디버그 코드 Debug.Log("dbTch : " + gesture.detectFastDoubleTouch(gesture.cntShortTouchTime, gesture.cntTouchIntervalTime).ToString() + '\n');
+        touchIntervalTimerFlag = true;
+        shortTouchTimerFlag = false;
+        circleFlag = false;
+        longTouchTimerFlag = false;
+        isDragging = false;
+        //stopGestureCoroutine(ref coroutineFindingCirclingGesture);
+
+        // if (gesture.detectLongStopTouch() > Time.deltaTime * 30)
+        // {
+        //     gesture.qwe.jumpState = GestureAnalyzer.GestureState.fire;
+
+        // }
         leverRectTransform.localPosition = Vector2.zero;
         plateRectTransform.localPosition = new Vector2(0, -500);
         setLeverHeadingDir(leverRectTransform, plateRectTransform);
     }
 
-    private void setPlatePosition(PointerEventData e){plateRectTransform.position = e.position;}
+    // private void stopGestureCoroutine(ref Coroutine c)
+    // {
+    //     StopCoroutine(c);
+    //     c = null;
+    // }
 
-    private void setLeverPosition(PointerEventData e){
-        leverRectTransform.position = e.position;
-        leverRectTransform.localPosition = Vector2.ClampMagnitude(
-            e.position - (Vector2)plateRectTransform.position,
-            plateRectTransform.rect.width * 0.5f
-        );
-        // //레버와 플레이트의 거리
-        // Vector2 inputDir = e.position - plate.anchoredPosition;
-        // //범위 밖으로 끌고나가면 클램프
-        // Vector2 clampedDir = inputDir.magnitude < leverRange ? inputDir : inputDir.normalized * leverRange;
-        // //레버 위치 지정
-        // lever.anchoredPosition = clampedDir;
+    private void setPlatePosition(PointerEventData e)
+    {
+        plateRectTransform.position = e.position;
     }
 
-    public void setPlayerSpeedLevel(){ 
-        Vector3 offset = plateRectTransform.position - leverRectTransform.position;
-        float sqrLen = offset.sqrMagnitude;
-        if(sqrLen == 0){ return; }
-        if(sqrLen > 18400){
-            speedLevel = 1;
-        } else if(sqrLen > 9000){
-            speedLevel = 2;
-        }
+    private void setLeverPosition(PointerEventData e)
+    {
+        Vector2 pos = e.position - (Vector2)gesture.touch.log.origin;
+        pos = Vector2.ClampMagnitude(pos, leverRange);
+        leverRectTransform.localPosition = pos;
     }
 
-    public void setPlayerSpeedLevel(int n){
-        if(n >= 0 && n <3) speedLevel = n;
-    }
-
-    private void setLeverHeadingDir(RectTransform _lever, RectTransform _plate){
+    private void setLeverHeadingDir(RectTransform _lever, RectTransform _plate)
+    {
         leverDir = new Vector2(
             _lever.position.x - _plate.position.x,
             _lever.position.y - _plate.position.y
         ).normalized;
     }
 
-    public void setJoystickVisibility(bool _visibility){
+    public void setJoystickVisibility(bool _visibility)
+    {
         plateGObj.SetActive(_visibility);
         leverGObj.SetActive(_visibility);
     }
 
-    private void setLeverLRN(){
-        if(leverDir.x < 0) leverHeadingLRN = LRUDN.Left;
-        else if(leverDir.x > 0) leverHeadingLRN = LRUDN.Right;
+    private void setLeverLRN()
+    {
+        if (leverDir.x < 0) leverHeadingLRN = LRUDN.Left;
+        else if (leverDir.x > 0) leverHeadingLRN = LRUDN.Right;
         else leverHeadingLRN = LRUDN.Neutral;
     }
 
-    private void setLeverUDN(){
-        if(leverDir.y < 0) leverHeadingUDN = LRUDN.Down;
-        else if(leverDir.y > 0) leverHeadingUDN = LRUDN.Up;
+    private void setLeverUDN()
+    {
+        if (leverDir.y < 0) leverHeadingUDN = LRUDN.Down;
+        else if (leverDir.y > 0) leverHeadingUDN = LRUDN.Up;
         else leverHeadingUDN = LRUDN.Neutral;
     }
 
-    public int getLeverLRN(){
-        if(leverHeadingLRN == LRUDN.Left) return 0;
-        else if(leverHeadingLRN == LRUDN.Right) return 1;
-        else return 4;
-    }
-    
-    public int getLeverUDN(){
-        if(leverHeadingUDN == LRUDN.Up) return 2;
-        else if(leverHeadingUDN == LRUDN.Down) return 3;
+    public int getLeverLRN()
+    {
+        if (leverHeadingLRN == LRUDN.Left) return 0;
+        else if (leverHeadingLRN == LRUDN.Right) return 1;
         else return 4;
     }
 
-    public int getPlayerSpeedLevel(){ return speedLevel; }
+    public int getLeverUDN()
+    {
+        if (leverHeadingUDN == LRUDN.Up) return 2;
+        else if (leverHeadingUDN == LRUDN.Down) return 3;
+        else return 4;
+    }
 
-    public Vector2 getLeverDir(){
-        if(leverDir != null){
+    public int getPlayerSpeedLevel() { return speedLevel; }
+
+    public Vector2 getLeverDir()
+    {
+        if (leverDir != null)
+        {
             return this.leverDir;
-        } else {
+        }
+        else
+        {
             return Vector2.zero;
         }
     }
+
+    public bool getIsDragging()
+    {
+        return isDragging;
+    }
+
+    // IEnumerator findCirclingGesture(PointerEventData e)
+    // {
+    //     gesture.detectCircling();
+    //     yield return new WaitForSeconds(0.2f);
+    // }
 }
+
+
+
+
+
+
+
